@@ -2,10 +2,10 @@
 //外部ファイル読み込み
 include("functions.php");
 
-//セッションハイジャックされてないかチェック
-//今のセッションIDなどを呼び出す為に、session_start();が必要
-session_start();
-ssidChk();
+////セッションハイジャックされてないかチェック
+////今のセッションIDなどを呼び出す為に、session_start();が必要
+//session_start();
+//ssidChk();
 
 
 
@@ -31,7 +31,7 @@ if($status==false){
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
       $view .= '<tr>';
       
-      $view .= '<td><a href="detailUser.php?id='.$result["id"].'">'.$result["id"].'</a></td>';
+      $view .= '<td><a>'.$result["id"].'</a></td>';
       $view .= '<td>'.$result["userName"].'</td>';
       $view .= '<td>'.$result["lid"].'</td>';
       $view .= '<td>*********</td>';
@@ -48,7 +48,7 @@ if($status==false){
           $view .= '<td>無効</td>';
       }
 //      $view .= '<td>'.$result["life_flg"].'</td>';
-      $view .= '<td><a href="deleteUser.php?id='.$result["id"].'">(削除)</a></td>';
+//      $view .= '<td><a href="deleteUser.php?id='.$result["id"].'">(削除)</a></td>';
       $view .= '</tr>';
   }
 }
@@ -67,7 +67,7 @@ if($status==false){
 
     <body>
         <div id="wrapper">
-            <?php include('header_inner-user.html'); ?>
+            <?php include('header_external-user.html'); ?>
             <section>
                 <h1>ユーザー一覧</h1>
             </section>
@@ -80,7 +80,7 @@ if($status==false){
                         <th>PW</th>
                         <th>権限</th>
                         <th>有効/無効</th>
-                        <th>削除</th>
+<!--                        <th>削除</th>-->
                     </tr>
                     <?=$view?>
                 </table>

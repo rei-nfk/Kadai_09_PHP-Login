@@ -14,18 +14,22 @@
             <h1>本を管理しよう！</h1>
         </header>
         <section class="content">
-       <h2>ログイン</h2>
-       <form name="form1" action="login_act.php" method="post">
-            ID:<input type="text" name="lid" />
-            PW:<input type="password" name="lpw" />
-            <input type="submit" value="LOGIN" />
-       </form>
-<!--
-            <div id="loginscreen">
-                <a href="selectBook.php">本を管理する</a>
-                <a href="selectUser.php">ユーザーを管理する</a>
-            </div>
--->
+            <h2>ログイン</h2>
+            <p>動作確認用：ID test2、PW test2</p>
+            <form name="form1" action="login_act.php" method="post">
+                <label class="input-title">ID:</label>
+                <div class="input">
+                    <input type="text" name="lid" />
+                </div>
+                <label class="input-title">PW:</label>
+                <div class="input">
+                    <input type="password" name="lpw" />
+                </div>
+                <div class="button">
+                    <input type="submit" value="LOGIN" id="submit"/>
+                </div>
+            </form>
+            <p><a href="selectUser_external-user.php">ログインせずに本・ユーザーを確認する</a></p>
         </section>
     </div>
 </body>

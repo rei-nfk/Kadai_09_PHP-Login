@@ -91,6 +91,21 @@ label{
     display: block;
     width: 500px;
 }
+div.button{
+    margin: 10px 0;
+}
+
 input#submit{
+    display: block;
     width: 200px;
+    height: 30px;
+    background-color: lightgray;
+}
+/*ユーザー登録*/
+input.radio{
+    width: 30px;
+}
+/*外部ユーザー向けナビゲーション*/
+li.nav-external{
+    width:50%;
 }

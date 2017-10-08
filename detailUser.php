@@ -62,12 +62,12 @@ if($status==false){
                         <?php
                             if($row["kanri_flg"]==0){
                                 $radio_kanri = 
-                                        '<input type="radio" name="kanri_flg" value="0" checked="checked">一般ユーザー
-                                        <input type="radio" name="kanri_flg" value="1">特権管理者';
+                                        '<input type="radio" name="kanri_flg" value="0" checked="checked" class="radio">一般ユーザー
+                                        <input type="radio" name="kanri_flg" value="1" class="radio">特権管理者';
                             }else{
                                 $radio_kanri = 
-                                        '<input type="radio" name="kanri_flg" value="0">一般ユーザー
-                                        <input type="radio" name="kanri_flg" value="1" checked="checked">特権管理者';
+                                        '<input type="radio" name="kanri_flg" value="0" class="radio">一般ユーザー
+                                        <input type="radio" name="kanri_flg" value="1" checked="checked" class="radio">特権管理者';
                             }
                             echo $radio_kanri;
                         ?>
@@ -76,12 +76,12 @@ if($status==false){
                         <?php
                             if($row["life_flg"]==0){
                                 $radio_life = 
-                                        '<input type="radio" name="life_flg" value="0" checked="checked">有効
-                                        <input type="radio" name="life_flg" value="1">無効';
+                                        '<input type="radio" name="life_flg" value="0" checked="checked" class="radio">有効
+                                        <input type="radio" name="life_flg" value="1" class="radio">無効';
                             }else{
                                 $radio_life = 
-                                        '<input type="radio" name="life_flg" value="0">有効
-                                        <input type="radio" name="life_flg" value="1" checked="checked">無効';
+                                        '<input type="radio" name="life_flg" value="0" class="radio">有効
+                                        <input type="radio" name="life_flg" value="1" checked="checked" class="radio">無効';
                             }
                             echo $radio_life;
                         ?>

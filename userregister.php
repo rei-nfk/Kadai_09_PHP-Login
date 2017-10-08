@@ -22,8 +22,8 @@
                     <label>ID：</label><input type="text" name="lid"><br>
                     <label>PW：</label><input type="text" name="lpw"><br>
                     <label>
-                        権限：</label><input type="radio" name="kanri_flg" value="0" checked="checked">一般ユーザー
-                    <input type="radio" name="kanri_flg" value="1">特権管理者
+                        権限：</label><input type="radio" name="kanri_flg" value="0" checked="checked" class="radio">一般ユーザー
+                    <input type="radio" name="kanri_flg" value="1" class="radio">特権管理者
                     <br>
                     <input type="submit" value="送信" id="submit">
                 </fieldset>
