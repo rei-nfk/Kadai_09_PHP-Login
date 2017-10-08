@@ -1,4 +1,13 @@
 <?php
+//外部ファイル読み込み
+include("functions.php");
+//セッションハイジャックされてないかチェック
+//今のセッションIDなどを呼び出す為に、session_start();が必要
+session_start();
+ssidChk();
+
+
+
 //1.GETでidを取得
 $id=$_GET["id"];
 

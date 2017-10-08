@@ -2,7 +2,8 @@
 //外部ファイル読み込み
 include("functions.php");
 //セッションハイジャック対策
-//ssidChk();
+session_start();
+ssidChk();
 
 
 //入力チェック(受信確認処理追加)

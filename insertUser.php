@@ -1,8 +1,10 @@
 <?php
 //外部ファイル読み込み
 include("functions.php");
-//セッションハイジャック対策
-//ssidChk();
+//セッションハイジャックされてないかチェック
+//今のセッションIDなどを呼び出す為に、session_start();が必要
+session_start();
+ssidChk();
 
 //入力チェック(受信確認処理追加)
 if(

@@ -1,8 +1,10 @@
 <?php
 //外部ファイル読み込み
 include("functions.php");
-////セッションハイジャック対策
-//ssidChk();
+//セッションハイジャックされてないかチェック
+//今のセッションIDなどを呼び出す為に、session_start();が必要
+session_start();
+ssidChk();
 
 //1.  DB接続
 try {
@@ -50,9 +52,10 @@ if($status==false){
 
     <body>
         <div id="wrapper">
+           <?php include('header_inner-user.html'); ?>
+<!--
             <header>
                 <p><a href="logout.php">ログアウト</a></p>
-                <h1>登録書籍一覧</h1>
             </header>
             <nav>
                 <ul>
@@ -62,6 +65,10 @@ if($status==false){
                     <li><a href="userregister.php">ユーザー登録</a></li>
                 </ul>
             </nav>
+-->
+            <section>
+                <h1>登録書籍一覧</h1>
+            </section>
             <section>
                 <table>
                     <tr>
