@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2017 年 10 月 05 日 09:44
+-- Generation Time: 2017 年 10 月 08 日 16:12
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -57,14 +57,15 @@ CREATE TABLE IF NOT EXISTS `gs_bm_table` (
   `bookComment` text COLLATE utf8_unicode_ci NOT NULL,
   `regBookDate` datetime NOT NULL,
   `regUser` int(12) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- テーブルのデータのダンプ `gs_bm_table`
 --
 
 INSERT INTO `gs_bm_table` (`id`, `bookName`, `bookUrl`, `bookComment`, `regBookDate`, `regUser`) VALUES
-(1, 'test', 'test', 'test3', '2017-10-01 22:42:01', 1);
+(1, 'test', 'test', 'test2', '2017-10-01 22:42:01', 1),
+(3, 'testbook001', '001', '001', '2017-10-08 16:38:01', 1);
 
 -- --------------------------------------------------------
 
@@ -79,14 +80,19 @@ CREATE TABLE IF NOT EXISTS `gs_user_table` (
   `lpw` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `kanri_flg` int(1) NOT NULL DEFAULT '0' COMMENT '0=管理者, 1=スーパー管理者 ',
   `life_flg` int(1) NOT NULL DEFAULT '0' COMMENT '0=使用中, 1=使用しなくなった '
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- テーブルのデータのダンプ `gs_user_table`
 --
 
 INSERT INTO `gs_user_table` (`id`, `userName`, `lid`, `lpw`, `kanri_flg`, `life_flg`) VALUES
-(1, 'nifuku', 'ID', 'PW', 0, 0);
+(3, '1', '1', '$2y$10$zF.cj8WryXsc9XeXlsl9zeeIQ9G/WQ0PTqYh5TzyieH7nbB/Fxte6', 0, 0),
+(5, 'test', 'test', 'test', 0, 0),
+(9, 'test2', 'test2', '$2y$10$2tZ9lHjUZgLV8MYtZe8L6OSsFL5ZBHeAAYJEL8o/cUKXFYHCWwONK', 0, 0),
+(10, 'test3', 'test3', '$2y$10$w/xGsqnA.LAd8TozNj3K6OlQTSAOqGqJbP3FD8ukjHdNZNoCFY.8.', 0, 0),
+(11, 'test4', 'test4', '$2y$10$/8nrQIuWCgiL2RVtgnIdXOSrVJiGIShTqafeCKs0u3ldMLOulvz7S', 0, 0),
+(12, 'c', 'c', '$2y$10$rntU4loPrPfDdIySij0ZuegLZ07jjqTp30ot/bBnVGyCYKhhrY2dG', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -123,12 +129,12 @@ MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `gs_bm_table`
 --
 ALTER TABLE `gs_bm_table`
-MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `gs_user_table`
 --
 ALTER TABLE `gs_user_table`
-MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
