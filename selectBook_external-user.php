@@ -47,8 +47,18 @@ if($status==false){
     <head>
         <meta charset="UTF-8">
         <title>本の一覧</title>
+        <?php include('header-settings.html'); ?>
+       <!--
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/bookmgt.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="js/jquery.fademover.js"></script>
+        <script>
+            $(function() {
+                $('body').fadeMover();
+            });
+        </script>
+-->
     </head>
 
     <body>

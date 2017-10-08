@@ -40,8 +40,7 @@ if($status==false){
 <head>
     <meta charset="UTF-8">
     <title>ユーザー情報を更新できます！</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bookmgt.css">
+    <?php include('header-settings.html'); ?>
 </head>
 
 <body>

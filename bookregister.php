@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>本の登録ページ</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bookmgt.css">
+    <?php include('header-settings.html'); ?>
 </head>
 
 <body>

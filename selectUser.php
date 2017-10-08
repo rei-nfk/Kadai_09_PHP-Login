@@ -61,8 +61,7 @@ if($status==false){
     <head>
         <meta charset="UTF-8">
         <title>ユーザー一覧</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/bookmgt.css">
+        <?php include('header-settings.html'); ?>
     </head>
 
     <body>

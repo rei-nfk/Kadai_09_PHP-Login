@@ -46,26 +46,12 @@ if($status==false){
     <head>
         <meta charset="UTF-8">
         <title>本の一覧</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/bookmgt.css">
+        <?php include('header-settings.html'); ?>
     </head>
 
     <body>
         <div id="wrapper">
            <?php include('header_inner-user.html'); ?>
-<!--
-            <header>
-                <p><a href="logout.php">ログアウト</a></p>
-            </header>
-            <nav>
-                <ul>
-                    <li><a href="selectBook.php">登録書籍一覧</a></li>
-                    <li><a href="bookregister.php">書籍登録</a></li>
-                    <li><a href="selectUser.php">登録ユーザー一覧</a></li>
-                    <li><a href="userregister.php">ユーザー登録</a></li>
-                </ul>
-            </nav>
--->
             <section>
                 <h1>登録書籍一覧</h1>
             </section>
