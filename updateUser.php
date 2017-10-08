@@ -1,4 +1,10 @@
 <?php
+//外部ファイル読み込み
+include("functions.php");
+//セッションハイジャック対策
+//ssidChk();
+
+
 //入力チェック(受信確認処理追加)
 if(
   !isset($_POST["userName"]) || $_POST["userName"]=="" ||
@@ -14,7 +20,7 @@ if(
 $id = $_POST["id"];
 $userName  = $_POST["userName"];
 $lid  = $_POST["lid"];
-$lpw = $_POST["lpw"];
+$lpw = password_hash($_POST["lpw"], PASSWORD_DEFAULT);
 $kanri_flg = $_POST["kanri_flg"];
 $life_flg = $_POST["life_flg"];
 

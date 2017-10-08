@@ -1,4 +1,9 @@
 <?php
+//外部ファイル読み込み
+include("functions.php");
+//セッションハイジャック対策
+//ssidChk();
+
 //入力チェック(受信確認処理追加)
 if(
   !isset($_POST["userName"]) || $_POST["userName"]=="" ||
@@ -12,7 +17,7 @@ if(
 //1. POSTデータ取得
 $userName  = $_POST["userName"];
 $lid  = $_POST["lid"];
-$lpw = $_POST["lpw"];
+$lpw = password_hash($_POST["lpw"],  PASSWORD_DEFAULT); //PWはハッシュ化して保存
 $kanri_flg = $_POST["kanri_flg"];
 
 //2. DB接続します(エラー処理追加)

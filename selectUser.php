@@ -1,4 +1,10 @@
 <?php
+//外部ファイル読み込み
+include("functions.php");
+//セッションハイジャック対策
+//ssidChk();
+
+
 //1.  DB接続
 try {
   $pdo = new PDO('mysql:dbname=gs_db37;charset=utf8;host=localhost','root','');
@@ -56,7 +62,7 @@ if($status==false){
     <body>
         <div id="wrapper">
             <header>
-                <p><a href="login.php">ログアウト</a></p>
+                <p><a href="logout.php">ログアウト</a></p>
                 <h1>ユーザー一覧</h1>
             </header>
             <nav>

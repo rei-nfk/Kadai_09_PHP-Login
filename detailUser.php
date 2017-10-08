@@ -1,4 +1,9 @@
 <?php
+//外部ファイル読み込み
+include("functions.php");
+//セッションハイジャック対策
+ssidChk();
+
 //0.GETでidを取得
 $id=$_GET["id"];
 
@@ -40,6 +45,7 @@ if($status==false){
 <body>
     <div id="wrapper">
         <header>
+            <p><a href="logout.php">ログアウト</a></p>
             <h1>ユーザー情報を更新しましょう！</h1>
         </header>
         <nav>
